@@ -14,6 +14,10 @@
 		775A49312046964A0068D768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 775A492F2046964A0068D768 /* LaunchScreen.storyboard */; };
 		775A493C2046964A0068D768 /* ________ProtocolOrientedArchitecturePractices_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775A493B2046964A0068D768 /* ________ProtocolOrientedArchitecturePractices_Tests.swift */; };
 		775A49472046964A0068D768 /* ________ProtocolOrientedArchitecturePractices_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775A49462046964A0068D768 /* ________ProtocolOrientedArchitecturePractices_UITests.swift */; };
+		775A4958204699C90068D768 /* SwitchWithTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775A4956204699C90068D768 /* SwitchWithTextTableViewCell.swift */; };
+		775A4959204699C90068D768 /* SwitchWithTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775A4957204699C90068D768 /* SwitchWithTextTableViewCell.xib */; };
+		775A495D20469F3F0068D768 /* ModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775A495C20469F3F0068D768 /* ModelViewModel.swift */; };
+		775A495F20469FF50068D768 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775A495E20469FF50068D768 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		775A49422046964A0068D768 /* 面向协议架构实践ProtocolOrientedArchitecturePractices.UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "面向协议架构实践ProtocolOrientedArchitecturePractices.UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		775A49462046964A0068D768 /* ________ProtocolOrientedArchitecturePractices_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "________ProtocolOrientedArchitecturePractices_UITests.swift"; sourceTree = "<group>"; };
 		775A49482046964A0068D768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		775A4956204699C90068D768 /* SwitchWithTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchWithTextTableViewCell.swift; sourceTree = "<group>"; };
+		775A4957204699C90068D768 /* SwitchWithTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchWithTextTableViewCell.xib; sourceTree = "<group>"; };
+		775A495C20469F3F0068D768 /* ModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModel.swift; sourceTree = "<group>"; };
+		775A495E20469FF50068D768 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,9 @@
 			children = (
 				775A49262046964A0068D768 /* AppDelegate.swift */,
 				775A49282046964A0068D768 /* ViewController.swift */,
+				775A495E20469FF50068D768 /* SettingsViewController.swift */,
+				775A495B20469F210068D768 /* Model */,
+				775A495A20469F120068D768 /* View */,
 				775A492A2046964A0068D768 /* Main.storyboard */,
 				775A492D2046964A0068D768 /* Assets.xcassets */,
 				775A492F2046964A0068D768 /* LaunchScreen.storyboard */,
@@ -123,6 +134,23 @@
 				775A49482046964A0068D768 /* Info.plist */,
 			);
 			path = "面向协议架构实践ProtocolOrientedArchitecturePractices.UITests";
+			sourceTree = "<group>";
+		};
+		775A495A20469F120068D768 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				775A4956204699C90068D768 /* SwitchWithTextTableViewCell.swift */,
+				775A4957204699C90068D768 /* SwitchWithTextTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		775A495B20469F210068D768 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				775A495C20469F3F0068D768 /* ModelViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +262,7 @@
 			files = (
 				775A49312046964A0068D768 /* LaunchScreen.storyboard in Resources */,
 				775A492E2046964A0068D768 /* Assets.xcassets in Resources */,
+				775A4959204699C90068D768 /* SwitchWithTextTableViewCell.xib in Resources */,
 				775A492C2046964A0068D768 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775A495D20469F3F0068D768 /* ModelViewModel.swift in Sources */,
 				775A49292046964A0068D768 /* ViewController.swift in Sources */,
+				775A4958204699C90068D768 /* SwitchWithTextTableViewCell.swift in Sources */,
+				775A495F20469FF50068D768 /* SettingsViewController.swift in Sources */,
 				775A49272046964A0068D768 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,9 +459,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJ6D8L57PH;
 				INFOPLIST_FILE = "面向协议架构实践ProtocolOrientedArchitecturePractices./Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.touchspring.--------ProtocolOrientedArchitecturePractices-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchspring.ProtocolOrientedArchitecturePractices-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -441,9 +474,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJ6D8L57PH;
 				INFOPLIST_FILE = "面向协议架构实践ProtocolOrientedArchitecturePractices./Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.touchspring.--------ProtocolOrientedArchitecturePractices-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchspring.ProtocolOrientedArchitecturePractices-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
